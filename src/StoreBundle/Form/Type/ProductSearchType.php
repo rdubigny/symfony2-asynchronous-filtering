@@ -48,8 +48,7 @@ class ProductSearchType extends AbstractType
                 'choice_value' => 'id',
                 'expanded'     => true,
                 'multiple'     => true,
-            ))
-        ->add('Filter', 'submit');
+            ));
     }
 
     public function getName()

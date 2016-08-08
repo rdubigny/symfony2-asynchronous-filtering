@@ -34,13 +34,13 @@ class ProductController extends Controller
     }
 
     /**
+     * @param Request $request
+     * @return array
      * @Route("/product-partial")
      * @Template()
      */
-    public function listPartialAction()
+    public function listPartialAction(Request $request)
     {
-        return array(
-                // ...
-            );
+        return $this->listAction($request);
     }
 }

@@ -21,11 +21,11 @@
             </td>
         </tr>
         </thead>
-        <tbody>
-            {% for product in productList %}
-                {% include "StoreBundle:Partials:product.html.twig" with {"product": product} %}
-            {% endfor %}
+
+        <tbody id="product-list">
+        {% include 'StoreBundle:Product:listPartial.html.twig' %}
         </tbody>
+
     </table>
 
 {% endblock %}

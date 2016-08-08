@@ -1,7 +1,3 @@
-{% extends "::base.html.twig" %}
-
-{% block title %}StoreBundle:Product:listPartial{% endblock %}
-
-{% block body %}
-<h1>Welcome to the Product:listPartial page</h1>
-{% endblock %}
+{% for product in productList %}
+    {% include "StoreBundle:Partials:product.html.twig" with {"product": product} %}
+{% endfor %}
