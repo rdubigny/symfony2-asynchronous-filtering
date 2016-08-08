@@ -1,0 +1,3 @@
+StoreBundle\Entity\Brand:
+    brand{1..10}:
+        title: '<lastname()>'

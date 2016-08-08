@@ -1,0 +1,31 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}StoreBundle:Product:list{% endblock %}
+
+{% block body %}
+    <h1>Welcome to the Product:list page</h1>
+
+    {{ form(form) }}
+
+    <table>
+        <thead>
+        <tr>
+            <td>
+                name
+            </td>
+            <td>
+                brand
+            </td>
+            <td>
+                price
+            </td>
+        </tr>
+        </thead>
+        <tbody>
+            {% for product in productList %}
+                {% include "StoreBundle:Partials:product.html.twig" with {"product": product} %}
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

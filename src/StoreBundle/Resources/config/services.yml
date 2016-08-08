@@ -1,0 +1,17 @@
+services:
+  store.brand.repository:
+    class: StoreBundle\Repository\BrandRepository
+    factory: [@doctrine.orm.entity_manager, getRepository]
+    arguments:
+      - StoreBundle\Entity\Brand
+
+  store.product.repository:
+    class: StoreBundle\Repository\ProductRepository
+    factory: [@doctrine.orm.entity_manager, getRepository]
+    arguments:
+      - StoreBundle\Entity\Product
+
+  store.form.type.product_search:
+    class: StoreBundle\Form\Type\ProductSearchType
+    arguments:
+      - "@store.product.repository"

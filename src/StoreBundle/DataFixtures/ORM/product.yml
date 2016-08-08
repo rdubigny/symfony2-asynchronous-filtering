@@ -1,0 +1,6 @@
+StoreBundle\Entity\Product:
+    product{1..1500}:
+      title: <lastname()>
+      description: <text(100)>
+      price: <randomNumber(3)>
+      brand: @brand*
